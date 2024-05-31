@@ -1,23 +1,18 @@
-import logo from './logo.svg';
-import './App.css';
-
+import ErroreBase from "./Component/ErroreBase";
+import UsoBase from "./Component/UsoBase";
+import ArrayState from "./Component/ArrayState";
+import StateObject from "./Component/StateObject";
+import CounterComponent from "./Component/CounterComponent";
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className="container">
+        <ErroreBase />
+        <UsoBase />
+        <ArrayState />
+        <StateObject />
+        <CounterComponent />
+      </div>
     </div>
   );
 }
