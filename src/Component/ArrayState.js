@@ -5,8 +5,13 @@ import {data} from '../data';
 const ArrayState = () => {
   const [Persone, setPersone] = useState(data);
   const removePeople = (id) => {
-    let newPeople = Persone.filter(persona => persona.id !== id);
-    setPersone(newPeople);
+    //let newPeople = Persone.filter(persona => persona.id !== id);
+
+    //value returnato da filter
+    setPersone(oldPeople => {
+        return oldPeople.filter(persona => persona.id !== id);
+      }
+    );
   }
   // console.log(Persone);
   return (
